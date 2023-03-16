@@ -191,13 +191,37 @@ section .animate:hover{
 
 /* about */
 .about{
-  height: 1rem;
-  width:2rem;
+  height: 6rem;
+  width: 13rem;
   margin: 5.5rem auto;
   font-size: 5rem;
   text-transform: capitalize;
-}
+  color: var(--title_color);
+  position: relative;
 
+}
+.about::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: var(--color_Text);
+}
+.about:hover::before{
+  animation: about 2s infinite;
+}
+@keyframes about {
+  0%{
+    width: 100%;
+  }
+  50%{
+    width: 50%;
+  }
+  100%{
+    width: 100%;
+  }
+}
 .All_about{
   position: relative;
   display: grid;
@@ -213,6 +237,58 @@ section .animate:hover{
     width: 100%;
     font-size: 2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width:320px) and (max-width:374px) {
   html{

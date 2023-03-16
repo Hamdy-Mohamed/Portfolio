@@ -53,7 +53,7 @@ ul li{
 }
 ul li a{
   text-decoration: none;
-  font-size: 1.9rem;
+  font-size: 2.5rem;
   color: var(--black);
 }
 ul li a:hover{
@@ -105,6 +105,9 @@ section .animate{
   background: var(--color_Text);
   animation: ball 6s infinite;
   grid-row: 2;
+}
+section .animate i{
+  font-size: 5rem;
 }
 section .animate:hover{
   background: #2F58CD;
@@ -190,6 +193,10 @@ section .animate:hover{
 }
 
 /* about */
+.sec{
+  clip-path: polygon(52% 0, 100% 0, 100% 35%, 100% 100%, 0 70%, 0 34%, 0 0);
+  background-color: #F6F1F1;
+}
 .about{
   height: 6rem;
   width: 13rem;
@@ -198,7 +205,6 @@ section .animate:hover{
   text-transform: capitalize;
   color: var(--title_color);
   position: relative;
-
 }
 .about::before{
   content: "";
@@ -225,7 +231,7 @@ section .animate:hover{
 .All_about{
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
 }
 .All_about img{
   height: 40rem;
@@ -239,58 +245,192 @@ section .animate:hover{
 }
 
 
+/* skills */
 
 
+.skills{
+  height: 6rem;
+  width: 12rem;
+  margin: 5.5rem auto;
+  font-size: 5rem;
+  text-transform: capitalize;
+  color: var(--title_color);
+  position: relative;
+}
+.skills::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: var(--color_Text);
+}
+.skills:hover::before{
+  animation: skills 2s infinite;
+}
+@keyframes skills {
+  0%{
+    width: 100%;
+  }
+  50%{
+    width: 50%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.All_skills{
+  display: grid;
+  width: 31rem;
+  margin: auto;
+  gap: 10rem;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+}
+.All_skills div img{
+  height: 10rem;
+  width: 10rem;
+  margin: auto auto;
+  cursor: pointer;
+}
 
 
+.contact{
+  height: 7rem;
+  width: 21rem;
+  margin: 4rem auto;
+  font-size: 5rem;
+  text-transform: capitalize;
+  color: var(--title_color);
+  position: relative;
+}
+.contact::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 77%;
+  height: 7px;
+  background: var(--color_Text);
+}
+.contact:hover::before{
+  animation: contact 2s infinite;
+}
+@keyframes contact {
+  0%{
+    width: 77%;
+  }
+  50%{
+    width: 50%;
+  }
+  100%{
+    width: 77%;
+  }
+}
+.question{
+  height: 7rem;
+  width: fit-content;
+  margin: 4rem auto;
+  font-size: 5rem;
+  text-transform: capitalize;
+  color: var(--title_color);
+  position: relative;
+}
+.All_contact{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.All_contact div i{
+  font-size: 33rem;
+  padding: 2rem;
+  width: auto;
+  margin: 2rem 2rem 1rem 5rem;
+  color: var(--color_Text);
+  background: #B7DEED;
+  background: linear-gradient(to right, #B7DEED 23%, #21B4E2 100%, #B7DEED 82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+form{
+  height: 30rem;
+  width: 30rem;
+  margin-top: 5rem;
+  background: red;
+  display: grid;
+  position: relative;
+  gap: 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+}
 
 
+form button {
+	border-radius:17px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:2rem;
+	padding:6px 13px;
+  margin-top: 2rem;
+  border: none;
+  background: red;
+  box-shadow: 0rem 0rem 3rem 0rem red;
+}
+form button:hover{
+  color: var(--black);
+  background: aqua;
+  box-shadow: 0rem 0rem 3rem 0rem aqua;
+}
+form input{
+  border: none;
+}
+form textarea{
+  border: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+::placeholder{
+  width: fit-content;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: var(--color_Text);
+}
 
 @media (min-width:320px) and (max-width:374px) {
+  html{
+    font-size: 8px;
+  }
+  .logo{
+    display: none;
+  }
+  .container{
+    width: 99%;
+    padding: 1rem;
+  }
+  svg{
+    display: none;
+  }
+  .All_about img{
+    display: none;
+  }
+  .All_skills{
+    grid-template-columns: auto auto;
+  }
+  .All_contact{
+    width:100%;
+  }
+  .All_contact .question{
+    width: 69rem;
+    font-size: 4rem;
+  }
+  .All_contact div i{
+    display:none;
+  }
+  
+}
+
+@media (min-width:375px) and (max-width:424px) {
   html{
     font-size: 8px;
   }
@@ -298,35 +438,40 @@ section .animate:hover{
     width: 99%;
     padding: 1rem;
   }
+  .All_skills{
+    grid-template-columns: auto auto;
+  }
   svg{
     display: none;
   }
   .All_about img{
     display: none;
+  }.All_contact{
+    width:100%;
   }
-
-  
+  .All_contact .question{
+    width: 69rem;
+    font-size: 4rem;
+  }
+  .All_contact div i{
+    display:none;
+  }
 }
-
-@media (min-width:375px) and (max-width:424px) {
+@media (min-width:546px) and (max-width:706px) {
   html{
-    font-size: 9px;
+    font-size: 12px;
   }
-  .container{
-    width: 99%;
-    padding: 1rem;
-  }
-  svg{
-    display: none;
-  }
-  .All_about img{
-    display: none;
+  form{
+    position: relative;
+    right: 25rem;
+    width: 50rem;
+    grid-column: 2;
   }
 }
 
 @media (min-width:425px) and (max-width:767px) {
   html{
-    font-size: 11px;
+    font-size: 9.5px;
   }
   svg{
     display: none;
@@ -334,22 +479,34 @@ section .animate:hover{
   .container{
     width: 99%;
     padding: 1rem;
+  }.All_skills{
+    grid-template-columns: auto auto;
   }
   svg{
     display: none;
   }
   .All_about img{
     display: none;
+  }.All_contact{
+    width:100%;
+  }
+  .All_contact .question{
+    width: fit-content;
+    font-size: 4rem;
+  }
+  .All_contact div i{
+    display:none;
   }
 }
 
 @media (min-width:768px) and (max-width:1023px) {
   html{
-    font-size: 11.5px;
+    font-size: 12px;
   }
   svg{
     display: none;
   }
+
   .home img{
     display: none;
   }
@@ -357,8 +514,8 @@ section .animate:hover{
     width: auto;
     padding: 1rem;
   }
-  svg{
-    display: none;
+  .All_contact div i{
+    font-size: 20rem;
   }
   .All_about img{
     display: none;

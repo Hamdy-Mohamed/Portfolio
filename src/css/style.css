@@ -4,6 +4,8 @@
   --color_Text:#62CDFF;
   --black:rgb(14, 13, 13);
   --title_color:#05C1FF;
+  --darkBgColor: #121212;
+  --dark_Text:#19A7CE;
 }
 *{
   padding: 0;
@@ -257,6 +259,7 @@ section .animate:hover{
   color: var(--title_color);
   position: relative;
 }
+
 .skills::before{
   content: "";
   position: absolute;
@@ -427,6 +430,9 @@ form textarea{
   .All_contact div i{
     display:none;
   }
+  form{
+    width: 100%;
+  }
   
 }
 
@@ -552,5 +558,35 @@ form textarea{
   }
   .All_about img{
     margin: -1rem;
+  }
+}
+
+@media(prefers-color-scheme: dark) {
+
+  body{
+    background: var(--darkBgColor);
+    color: #EEE;
+  }
+  ul li a{
+    color: #EEE;
+  }
+  strong{
+    color: var(--dark_Text);
+  }
+  .sec{
+    background:#2C3333;
+  }
+  section .animate{
+    background:var(--color_Text);
+  }
+  section .animate:hover{
+    background: #05C1FF;
+    box-shadow: 0px 0px 10px 11px #05C1FF;
+  }
+  section .animate i{
+    color: aqua;
+  }
+  section .animate i:hover{
+    color: rgb(55, 151, 151);
   }
 }

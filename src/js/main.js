@@ -8,8 +8,6 @@ let react_icon = document.querySelector(".react");
 btn.onclick = ()=>{
     window.open("https://www.linkedin.com/in/hamdy-abdal-majeed-b67b32246/overlay/background-image/")    
 };
-
-
 html_icon.onclick = ()=>{
     window.open("https://developer.mozilla.org/en-US/docs/Web/HTML")    
 };
@@ -31,3 +29,4 @@ sass_icon.onclick = ()=>{
 react_icon.onclick = ()=>{
     window.open("https://reactjs.org")
 }
+

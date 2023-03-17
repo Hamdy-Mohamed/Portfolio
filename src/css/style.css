@@ -1,13 +1,12 @@
-
-:root{
+:root {
   --bg_color: rgb(240, 248, 255);
-  --color_Text:#62CDFF;
-  --black:rgb(14, 13, 13);
-  --title_color:#05C1FF;
+  --color_Text: #62cdff;
+  --black: rgb(14, 13, 13);
+  --title_color: #05c1ff;
   --darkBgColor: #121212;
-  --dark_Text:#19A7CE;
+  --dark_Text: #19a7ce;
 }
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -16,90 +15,88 @@
   outline: none;
 }
 
-html{
-  font-size: 16px;
+html {
+  font-size: 12px;
   scroll-behavior: smooth;
 }
-body{
+body {
   font-family: revert;
   background: rgb(240, 248, 255);
   color: var(--black);
 }
-strong{
-  color:#62CDFF;
+strong {
+  color: #62cdff;
   font-weight: 800;
   text-transform: capitalize;
 }
-.container{
+.container {
   width: auto;
   overflow: hidden;
 }
-section{
+section {
   min-height: 80vh;
 }
-.sec-1{
+.sec-1 {
   height: 140vh;
 }
-ul{
+ul {
   display: flex;
   justify-content: end;
   align-items: center;
   margin: 1rem;
 }
-ul div{
+ul div {
   font-size: 3.5rem;
   position: absolute;
   left: 0;
   margin: 1rem;
 }
-ul li{
+ul li {
   margin: 1rem;
   list-style: none;
 }
-ul li a{
+ul li a {
   text-decoration: none;
   font-size: 2.5rem;
   color: var(--black);
   text-transform: capitalize;
 }
-ul li a:hover{
+ul li a:hover {
   color: var(--color_Text);
 }
 
-.home{
+.home {
   display: grid;
-  grid-template-columns: repeat(4,auto);
+  grid-template-columns: repeat(4, auto);
   grid-template-rows: 29em 14em auto auto auto auto;
 }
-section .title{
+section .title {
   margin-top: 14rem;
   font-size: 3rem;
   padding: 3rem;
   width: 47rem;
   grid-column: 0;
   grid-row: 1;
-
 }
-section .title h1{
+section .title h1 {
   font-size: 3rem;
   text-transform: capitalize;
 }
-section .title h2{
+section .title h2 {
   font-size: 4rem;
   text-transform: capitalize;
-
 }
-section .title h3{
+section .title h3 {
   font-size: 2rem;
   opacity: 0.7;
   text-transform: capitalize;
 }
-::selection{
+::selection {
   background-color: var(--color_Text);
   color: var(--bg_color);
 }
 
-section .animate{
+section .animate {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   height: 12rem;
   width: 12rem;
@@ -112,98 +109,99 @@ section .animate{
   animation: ball 6s infinite;
   grid-row: 2;
 }
-section .animate i{
+section .animate i {
   font-size: 5rem;
 }
-section .animate:hover{
-  background: #2F58CD;
+section .animate:hover {
+  background: #2f58cd;
   color: aqua;
   cursor: pointer;
-  box-shadow: 0px 0px 10px 11px #2F58CD;
+  box-shadow: 0px 0px 10px 11px #2f58cd;
   opacity: 0.5;
 }
 @keyframes ball {
-  0%,100%{
+  0%,
+  100% {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
-  10%{
-    border-radius: 30% 70% 60% 40% / 40% 23% 77% 60% ;
+  10% {
+    border-radius: 30% 70% 60% 40% / 40% 23% 77% 60%;
   }
-  20%{
-    border-radius: 30% 70% 60% 40% / 51% 33% 67% 49% ;
+  20% {
+    border-radius: 30% 70% 60% 40% / 51% 33% 67% 49%;
   }
-  30%{
-    border-radius: 12% 88% 33% 67% / 60% 19% 81% 40% ;
+  30% {
+    border-radius: 12% 88% 33% 67% / 60% 19% 81% 40%;
   }
-  40%{
-    border-radius: 1% 99% 5% 95% / 76% 8% 92% 24% ;
+  40% {
+    border-radius: 1% 99% 5% 95% / 76% 8% 92% 24%;
   }
-  50%{
-    border-radius: 1% 99% 5% 95% / 100% 0% 100% 0% ;
+  50% {
+    border-radius: 1% 99% 5% 95% / 100% 0% 100% 0%;
   }
-  60%{
-    border-radius: 1% 99% 0% 100% / 100% 0% 100% 0% ;
+  60% {
+    border-radius: 1% 99% 0% 100% / 100% 0% 100% 0%;
   }
-  70%{
-    border-radius: 18% 82% 36% 64% / 51% 37% 63% 49% ;
+  70% {
+    border-radius: 18% 82% 36% 64% / 51% 37% 63% 49%;
   }
-  80%{
-    border-radius: 18% 82% 33% 67% / 66% 37% 63% 34% ;
+  80% {
+    border-radius: 18% 82% 33% 67% / 66% 37% 63% 34%;
   }
-  90%{
-    border-radius: 18% 82% 33% 67% / 78% 46% 54% 22% ;
+  90% {
+    border-radius: 18% 82% 33% 67% / 78% 46% 54% 22%;
   }
 }
 
-.home img{
+.home img {
   display: flex;
   height: 30rem;
   width: auto;
-  margin: 10rem 0rem 1rem 11rem;
+  margin: 13rem 0rem 0rem 9rem;
   border-radius: 50%;
   animation: profile 6s infinite;
 }
 
-
 @keyframes profile {
-  0%,100%{
+  0%,
+  100% {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
-  10%{
-    border-radius: 30% 70% 60% 40% / 40% 23% 77% 60% ;
+  10% {
+    border-radius: 30% 70% 60% 40% / 40% 23% 77% 60%;
   }
-  20%{
-    border-radius: 30% 70% 60% 40% / 51% 33% 67% 49% ;
+  20% {
+    border-radius: 30% 70% 60% 40% / 51% 33% 67% 49%;
   }
-  30%{
-    border-radius: 12% 88% 33% 67% / 60% 19% 81% 40% ;
+  30% {
+    border-radius: 12% 88% 33% 67% / 60% 19% 81% 40%;
   }
-  40%{
-    border-radius: 1% 99% 5% 95% / 76% 8% 92% 24% ;
+  40% {
+    border-radius: 1% 99% 5% 95% / 76% 8% 92% 24%;
   }
-  50%{
-    border-radius: 1% 99% 5% 95% / 100% 0% 100% 0% ;
+  50% {
+    border-radius: 1% 99% 5% 95% / 100% 0% 100% 0%;
   }
-  60%{
-    border-radius: 1% 99% 0% 100% / 100% 0% 100% 0% ;
+  60% {
+    border-radius: 1% 99% 0% 100% / 100% 0% 100% 0%;
   }
-  70%{
-    border-radius: 18% 82% 36% 64% / 51% 37% 63% 49% ;
+  70% {
+    border-radius: 18% 82% 36% 64% / 51% 37% 63% 49%;
   }
-  80%{
-    border-radius: 18% 82% 33% 67% / 66% 37% 63% 34% ;
+  80% {
+    border-radius: 18% 82% 33% 67% / 66% 37% 63% 34%;
   }
-  90%{
-    border-radius: 18% 82% 33% 67% / 78% 46% 54% 22% ;
+  90% {
+    border-radius: 18% 82% 33% 67% / 78% 46% 54% 22%;
   }
 }
 
 /* about */
-.sec{
-  clip-path: polygon(25% 0%, 100% 0, 100% 100%, 0 83%, 0 0);
-  background-color: #F6F1F1;
+.sec {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+  background-color: #f6f1f1;
 }
-.about{
+.about {
   height: 6rem;
   width: 13rem;
   margin: 5.5rem auto;
@@ -212,7 +210,7 @@ section .animate:hover{
   color: var(--title_color);
   position: relative;
 }
-.about::before{
+.about::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -220,42 +218,40 @@ section .animate:hover{
   height: 7px;
   background: var(--color_Text);
 }
-.about:hover::before{
+.about:hover::before {
   animation: about 2s infinite;
 }
 @keyframes about {
-  0%{
+  0% {
     width: 100%;
   }
-  50%{
+  50% {
     width: 50%;
   }
-  100%{
+  100% {
     width: 100%;
   }
 }
-.All_about{
+.All_about {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
-.All_about img{
+.All_about img {
   height: 40rem;
   width: auto;
   margin-left: 2rem;
   padding: 2rem;
   border-radius: 3rem;
 }
-.All_about p{
-    width: 100%;
-    font-size: 2rem;
+.All_about p {
+  width: 100%;
+  font-size: 2rem;
 }
-
 
 /* skills */
 
-
-.skills{
+.skills {
   height: 6rem;
   width: 12rem;
   margin: 5.5rem auto;
@@ -265,7 +261,7 @@ section .animate:hover{
   position: relative;
 }
 
-.skills::before{
+.skills::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -273,37 +269,36 @@ section .animate:hover{
   height: 7px;
   background: var(--color_Text);
 }
-.skills:hover::before{
+.skills:hover::before {
   animation: skills 2s infinite;
 }
 @keyframes skills {
-  0%{
+  0% {
     width: 100%;
   }
-  50%{
+  50% {
     width: 50%;
   }
-  100%{
+  100% {
     width: 100%;
   }
 }
 
-.All_skills{
+.All_skills {
   display: grid;
   width: 31rem;
   margin: auto;
   gap: 10rem;
-  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
-.All_skills div img{
+.All_skills div img {
   height: 10rem;
   width: 10rem;
   margin: auto auto;
   cursor: pointer;
 }
 
-
-.contact{
+.contact {
   height: 7rem;
   width: 21rem;
   margin: 4rem auto;
@@ -312,7 +307,7 @@ section .animate:hover{
   color: var(--title_color);
   position: relative;
 }
-.contact::before{
+.contact::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -320,21 +315,21 @@ section .animate:hover{
   height: 7px;
   background: var(--color_Text);
 }
-.contact:hover::before{
+.contact:hover::before {
   animation: contact 2s infinite;
 }
 @keyframes contact {
-  0%{
+  0% {
     width: 77%;
   }
-  50%{
+  50% {
     width: 50%;
   }
-  100%{
+  100% {
     width: 77%;
   }
 }
-.question{
+.question {
   height: 7rem;
   width: fit-content;
   margin: 4rem auto;
@@ -343,22 +338,22 @@ section .animate:hover{
   color: var(--title_color);
   position: relative;
 }
-.All_contact{
+.All_contact {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-.All_contact div i{
+.All_contact div i {
   font-size: 33rem;
   padding: 2rem;
   width: auto;
   margin: 2rem 2rem 1rem 5rem;
   color: var(--color_Text);
-  background: #B7DEED;
-  background: linear-gradient(to right, #B7DEED 23%, #21B4E2 100%, #B7DEED 82%);
+  background: #b7deed;
+  background: linear-gradient(to right, #b7deed 23%, #21b4e2 100%, #b7deed 82%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-form{
+form {
   height: 30rem;
   width: 30rem;
   margin-top: 5rem;
@@ -371,227 +366,141 @@ form{
   background: transparent;
 }
 
-
 form button {
-	border-radius:17px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:2rem;
-	padding:6px 13px;
+  border-radius: 17px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 2rem;
+  padding: 6px 13px;
   margin-top: 2rem;
   border: none;
   background: red;
   box-shadow: 0rem 0rem 3rem 0rem red;
 }
-form button:hover{
+form button:hover {
   color: var(--black);
   background: aqua;
   box-shadow: 0rem 0rem 3rem 0rem aqua;
 }
-form input{
+form input {
   border: none;
 }
-form textarea{
+form textarea {
   border: none;
 }
 
-::placeholder{
+::placeholder {
   width: fit-content;
   font-weight: bold;
   padding: 1rem;
   font-size: 1.5rem;
   color: var(--color_Text);
 }
-
-@media (min-width:320px) and (max-width:374px) {
-  html{
-    font-size: 8px;
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 9px;
   }
-  .logo{
-    display: none;
+  .logo {display: none;}
+  svg {display: none;}
+  .sec-1 img {display: none;}
+  .All_about img {display: none;}
+  .All_contact div i{display: none;}
+  .All_about p{
+    width: 70%;
+    font-size: 15px;
+    margin-bottom: 11rem;
   }
-  .container{
-    width: 99%;
-    padding: 1rem;
-  }
-  svg{
-    display: none;
-  }
-  .All_about img{
-    display: none;
-  }
-  .All_skills{
+  .All_skills {
     grid-template-columns: auto auto;
-  }
-  .All_contact{
-    width:100%;
-  }
-  .All_contact .question{
-    width: 69rem;
-    font-size: 4rem;
-  }
-  .All_contact div i{
-    display:none;
-  }
-  form{
-    width: 100%;
   }
   
-}
 
-@media (min-width:375px) and (max-width:424px) {
-  html{
-    font-size: 8px;
+  .All_contact div {
+    width: 100%;
   }
-  .container{
-    width: 99%;
-    padding: 1rem;
-  }
-  .All_skills{
-    grid-template-columns: auto auto;
-  }
-  svg{
-    display: none;
-  }
-  .All_about img{
-    display: none;
-  }.All_contact{
-    width:100%;
-  }
-  .All_contact .question{
-    width: 69rem;
+  .question {
+    width: 100%;
     font-size: 4rem;
   }
-  .All_contact div i{
-    display:none;
+  form {
+    width: 100%;
   }
 }
-@media (min-width:546px) and (max-width:706px) {
+
+@media only screen and (min-width:768px) and (max-width:1199px){
   html{
     font-size: 12px;
   }
-  form{
-    position: relative;
-    right: 25rem;
-    width: 50rem;
-    grid-column: 2;
-  }
-}
-
-@media (min-width:425px) and (max-width:767px) {
-  html{
-    font-size: 9.5px;
-  }
-  svg{
-    display: none;
-  }
-  .container{
-    width: 99%;
-    padding: 1rem;
-  }.All_skills{
-    grid-template-columns: auto auto;
-  }
-  svg{
-    display: none;
-  }
   .All_about img{
-    display: none;
-  }.All_contact{
-    width:100%;
+    margin: auto;
   }
-  .All_contact .question{
-    width: fit-content;
-    font-size: 4rem;
+  .sec-1 img {
+    margin: 13rem 0rem 0rem -9rem;
+    height: 25rem;
+  }
+  .sec {
+    clip-path: none;
   }
   .All_contact div i{
-    display:none;
+    font-size: 29rem;
+    padding: 0rem;
+    margin: 2rem 2rem 1rem 0rem;
   }
 }
 
-@media (min-width:768px) and (max-width:1023px) {
+@media only screen and (min-width:1200px) and (max-width:2039px) {
   html{
-    font-size: 12px;
+    font-size: 14px;
   }
-  svg{
-    display: none;
-  }
-
-  .home img{
-    display: none;
-  }
-  .container{
-    width: auto;
-    padding: 1rem;
-  }
-  .All_contact div i{
-    font-size: 20rem;
-  }
-  .All_about img{
-    display: none;
+  .about{
+    margin: 7.5rem auto;
   }
 }
 
-@media (min-width:1024px) and (max-width:1439px) {
+@media only screen and (min-width:1900px) {
   html{
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
-@media (min-width:1440px) and (max-width:1499px){
-  html{
-    font-size: 18px;
-  }
-  .container{
-    width: auto;
-    padding: 1rem;
-  }
-  .All_about img{
-    margin: -1rem;
-  }
 
-}
 
-@media (min-width:1500px) {
-  html{
-    font-size: 19.5px;
-  }
-  .container{
-    width: auto;
-    padding: 1rem;
-  }
-  .All_about img{
-    margin: -1rem;
-  }
-}
 
-@media(prefers-color-scheme: dark) {
 
-  body{
+
+
+
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  body {
     background: var(--darkBgColor);
-    color: #EEE;
+    color: #eee;
   }
-  ul li a{
-    color: #EEE;
+  ul li a {
+    color: #eee;
   }
-  strong{
+  strong {
     color: var(--dark_Text);
   }
-  .sec{
-    background:#2C3333;
+  .sec {
+    background: #2c3333;
   }
-  section .animate{
-    background:var(--color_Text);
+  section .animate {
+    background: var(--color_Text);
   }
-  section .animate:hover{
-    background: #05C1FF;
-    box-shadow: 0px 0px 10px 11px #05C1FF;
+  section .animate:hover {
+    background: #05c1ff;
+    box-shadow: 0px 0px 10px 11px #05c1ff;
   }
-  section .animate i{
+  section .animate i {
     color: aqua;
   }
-  section .animate i:hover{
+  section .animate i:hover {
     color: rgb(55, 151, 151);
   }
 }

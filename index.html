@@ -7,23 +7,27 @@
     <title>Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="stylesheet" href="src/css/style.css" />
-    <link rel="stylesheet" href="src/css/all.min.css">
-    </head>
+    <link rel="stylesheet" href="src/css/all.min.css" />
+    <link rel="stylesheet" href="src/css/animate.css" />
+  </head>
   <body>
+    
+    <div class="curoser"></div>
+    <div class="curoser-lazy"></div>
     <article>
       <div class="container">
         <header>
-          <ul>
+          <ul class="wow bounceInDown">
             <div class="logo"><strong>h</strong>amdy</div>
-            <li><a href="">home</a></li>
-            <li><a href="">about</a></li>
-            <li><a href="">skills</a></li>
-            <li><a href="">contact</a></li>
+            <li><a href="#">home</a></li>
+            <li><a href="#ABOUT">about</a></li>
+            <li><a href="#SKILLS">skills</a></li>
+            <li><a href="#CONTACT">contact</a></li>
           </ul>
         </header>
 
         <section class="sec-1">
-          <div class="home">
+          <div class="wow bounceInLeft home">
             <div class="title">
               <h1>Hi,i'am!</h1>
               <h2>hamdy-mohamed</h2>
@@ -127,55 +131,86 @@
           </svg>
         </section>
 
-
-        <section class="sec">
-          <div class="about">ab<strong>out</strong></div>
+        <section id="ABOUT" class="sec">
+          <div class="wow bounceInDown about">ab<strong>out</strong></div>
           <div class="All_about">
-            <img src="src/imgs/linkedin_profile.jpg" alt="">
-            <p>Hi, I'm <strong>[Hamdy-Maohamed]</strong>,a 19-year-old web programmer based in Egypt. With 2 years of experience in web development, I have a solid understanding of front-end programming <strong>languages,</strong> including <strong>HTML, CSS, JavaScript,python,sass, bootstrap, tailwend and React js</strong>
-              Despite being in my third year of high school, I have been pursuing my passion for programming through self-education and real-world projects. I have worked on a variety of web projects, ranging from small personal websites to large-scale e-commerce platforms.
-              My skills and experience enable me to develop responsive, user-friendly, and secure websites that meet clients' needs and expectations. I'm always eager to learn and keep up-to-date with the latest trends and technologies in the industry.
-              If you're looking for a dedicated and reliable web developer for your project, please don't hesitate to get in touch with me.
+            <img
+              class="wow bounceInLeft"
+              src="src/imgs/linkedin_profile.jpg"
+              alt=""
+            />
+            <p class="wow bounceInRight">
+              Hi, I'm <strong>[Hamdy-Maohamed]</strong>,a 19-year-old web
+              programmer based in Egypt. With 2 years of experience in web
+              development, I have a solid understanding of front-end programming
+              <strong>languages,</strong> including
+              <strong
+                >HTML, CSS, JavaScript,python,sass, bootstrap, tailwend and
+                React js</strong
+              >
+              Despite being in my third year of high school, I have been
+              pursuing my passion for programming through self-education and
+              real-world projects. I have worked on a variety of web projects,
+              ranging from small personal websites to large-scale e-commerce
+              platforms. My skills and experience enable me to develop
+              responsive, user-friendly, and secure websites that meet clients'
+              needs and expectations. I'm always eager to learn and keep
+              up-to-date with the latest trends and technologies in the
+              industry. If you're looking for a dedicated and reliable web
+              developer for your project, please don't hesitate to get in touch
+              with me.
             </p>
           </div>
         </section>
-        <section>
+        <section id="SKILLS">
           <div class="skills">ski<strong>lls</strong></div>
           <div class="All_skills">
-            <div class="html"><img src="src/imgs/html.png" alt=""></div>
-            <div class="css"><img src="src/imgs/css-3.png" alt=""></div>
-            <div class="js"><img src="src/imgs/js.png" alt=""></div>
-            <div class="bs"><img src="src/imgs/bootstrap.png" alt=""></div>
-            <div class="sass"><img src="src/imgs/sass.png" alt=""></div>
-            <div class="react"><img src="src/imgs/react.png" alt=""></div>
+            <div class="wow bounceInLeft html">
+              <img src="src/imgs/html.png" alt="" />
+            </div>
+            <div class="wow bounceInRight css">
+              <img src="src/imgs/css-3.png" alt="" />
+            </div>
+            <div class="wow bounceInLeft js">
+              <img src="src/imgs/js.png" alt="" />
+            </div>
+            <div class="wow bounceInRight bs">
+              <img src="src/imgs/bootstrap.png" alt="" />
+            </div>
+            <div class="wow bounceInLeft sass">
+              <img src="src/imgs/sass.png" alt="" />
+            </div>
+            <div class="wow bounceInRight react">
+              <img src="src/imgs/react.png" alt="" />
+            </div>
           </div>
         </section>
-        
 
-        
-        <section>
-          <div class="contact">con<strong>tact</strong><br></div>
-          <div class="question">Have any Question?</div>
+        <section id="CONTACT">
+          <div class="wow bounceInDown contact">
+            con<strong>tact</strong><br />
+          </div>
+          <div class="wow bounceInDown question">Have any Question?</div>
           <div class="All_contact">
-            <div><i class="fa-regular fa-envelope-open"></i></div>
-        
-            <form  action="" method="post">
-              <input type="text" placeholder="First Name">
-              <input type="text" placeholder="Last Name">
-              <input type="email" placeholder="Your Gmail?">
+            <div class="wow bounceInLeft">
+              <i class="fa-regular fa-envelope-open"></i>
+            </div>
+
+            <form class="wow bounceInRight" action="" method="post">
+              <input type="text" placeholder="First Name" />
+              <input type="text" placeholder="Last Name" />
+              <input type="email" placeholder="Your Gmail?" />
               <textarea placeholder="Your question "></textarea>
               <button type="submit">Send Message</button>
             </form>
           </div>
         </section>
-
-
-
-
-
       </div>
     </article>
-
     <script src="src/js/main.js"></script>
+    <script src="src/js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

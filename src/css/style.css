@@ -14,7 +14,38 @@
   user-select: none;
   outline: none;
 }
+::-webkit-scrollbar {
+  background: gray;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dark_Text);
+  border-radius: 2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--title_color);
+}
 
+/* curoser */
+.curoser{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate3d(-50%,-50%,0);
+  top: 0;
+  left: 0;
+  background: var(--color_Text);
+}
+
+.curoser-lazy{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--color_Text);
+  position: absolute;
+  transform: translate3d(-50%,-50%,0);
+  transition: 0.10ms ease-out;
+}
 html {
   font-size: 12px;
   scroll-behavior: smooth;
@@ -238,7 +269,7 @@ section .animate:hover {
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
 .All_about img {
-  height: 40rem;
+  height: 33rem;
   width: auto;
   margin-left: 2rem;
   padding: 2rem;
@@ -246,7 +277,7 @@ section .animate:hover {
 }
 .All_about p {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 /* skills */
@@ -402,12 +433,28 @@ form textarea {
   html {
     font-size: 9px;
   }
-  .logo {display: none;}
-  svg {display: none;}
-  .sec-1 img {display: none;}
-  .All_about img {display: none;}
-  .All_contact div i{display: none;}
-  .All_about p{
+  .curoser{
+    display: none;
+  }
+  .curoser-lazy{
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  svg {
+    display: none;
+  }
+  .sec-1 img {
+    display: none;
+  }
+  .All_about img {
+    display: none;
+  }
+  .All_contact div i {
+    display: none;
+  }
+  .All_about p {
     width: 70%;
     font-size: 15px;
     margin-bottom: 11rem;
@@ -415,7 +462,6 @@ form textarea {
   .All_skills {
     grid-template-columns: auto auto;
   }
-  
 
   .All_contact div {
     width: 100%;
@@ -429,11 +475,11 @@ form textarea {
   }
 }
 
-@media only screen and (min-width:768px) and (max-width:1199px){
-  html{
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  html {
     font-size: 12px;
   }
-  .All_about img{
+  .All_about img {
     margin: auto;
   }
   .sec-1 img {
@@ -443,39 +489,27 @@ form textarea {
   .sec {
     clip-path: none;
   }
-  .All_contact div i{
+  .All_contact div i {
     font-size: 29rem;
     padding: 0rem;
     margin: 2rem 2rem 1rem 0rem;
   }
 }
 
-@media only screen and (min-width:1200px) and (max-width:2039px) {
-  html{
+@media only screen and (min-width: 1200px) and (max-width: 2039px) {
+  html {
     font-size: 14px;
   }
-  .about{
+  .about {
     margin: 7.5rem auto;
   }
 }
 
-@media only screen and (min-width:1900px) {
-  html{
+@media only screen and (min-width: 1900px) {
+  html {
     font-size: 16px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 @media (prefers-color-scheme: dark) {
   body {
     background: var(--darkBgColor);

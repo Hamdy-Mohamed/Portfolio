@@ -25,6 +25,7 @@
   background: var(--title_color);
 }
 
+
 /* curoser */
 .curoser{
   width: 30px;
@@ -35,6 +36,7 @@
   top: 0;
   left: 0;
   background: var(--color_Text);
+  z-index: -1;
 }
 
 .curoser-lazy{
@@ -45,6 +47,7 @@
   position: absolute;
   transform: translate3d(-50%,-50%,0);
   transition: 0.10ms ease-out;
+  z-index: -1;
 }
 html {
   font-size: 12px;
@@ -63,6 +66,9 @@ strong {
 .container {
   width: auto;
   overflow: hidden;
+}
+.logo{
+  cursor: pointer;
 }
 section {
   min-height: 80vh;
@@ -94,6 +100,21 @@ ul li a {
 }
 ul li a:hover {
   color: var(--color_Text);
+}
+.color{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 3rem;
+  width: 5rem;
+  background-color:#05c1ff;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.color::-webkit-color-swatch {
+  border-radius: 15px;
+  border: none;
 }
 
 .home {
@@ -415,7 +436,7 @@ form button:hover {
   background: aqua;
   box-shadow: 0rem 0rem 3rem 0rem aqua;
 }
-form input {
+form .input {
   border: none;
 }
 form textarea {
@@ -431,13 +452,17 @@ form textarea {
 }
 @media only screen and (max-width: 767px) {
   html {
-    font-size: 9px;
+    font-size: 8.2px;
   }
   .curoser{
     display: none;
   }
   .curoser-lazy{
     display: none;
+  }
+  .title img{
+    display: flex;
+    flex-direction: row;
   }
   .logo {
     display: none;

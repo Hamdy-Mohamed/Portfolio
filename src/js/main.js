@@ -45,6 +45,11 @@ let editCuroser = function editCuroser(event) {
   curoser_lazy.style.top = event.clientY + "px";
 };
 
+window.onscroll = function () {
+  curoser.remove();
+  curoser_lazy.remove();
+};
+
 window.addEventListener("mousemove", editCuroser);
 let change = document.addEventListener("dblclick", function (event) {
   let mouseX = event.clientX;
@@ -69,9 +74,35 @@ color.addEventListener("change", function () {
   }
 });
 
-let reloadbtn = document.querySelector(".logo");
+// remove inspuct from page
+document.addEventListener('contextmenu',function(e){
+  e.preventDefault();
+})
 
+
+let reloadbtn = document.querySelector(".logo");
 reloadbtn.onclick = function () {
-window.location.reload();
+  window.location.reload();
 };
 
+
+let facebook = document.querySelector("#facebook");
+let twitter = document.querySelector("#twitter");
+let linkedin = document.querySelector("#linkedin");
+let google = document.querySelector("#google");
+
+facebook.onclick = () => {
+  window.open("https://www.facebook.com/hamdy.elgokar.5");
+};
+
+twitter.onclick = () => {
+  window.open("https://twitter.com/HamdyMohamedd1");
+};
+
+linkedin.onclick = () => {
+  window.open("https://www.linkedin.com/in/hamdy-abdal-majeed-b67b32246/");
+};
+
+google.onclick = () => {
+  window.open("https://mail.google.com/mail/mohameddhamdy407@gmail.com");
+};

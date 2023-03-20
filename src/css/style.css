@@ -57,6 +57,7 @@ body {
   font-family: revert;
   background: rgb(240, 248, 255);
   color: var(--black);
+  font-family: monospace;
 }
 strong {
   color: #62cdff;
@@ -119,29 +120,29 @@ ul li a:hover {
 
 .home {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
   grid-template-rows: 29em 14em auto auto auto auto;
 }
 section .title {
-  margin-top: 14rem;
-  font-size: 3rem;
-  padding: 3rem;
-  width: 47rem;
-  grid-column: 0;
-  grid-row: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-section .title h1 {
-  font-size: 3rem;
-  text-transform: capitalize;
-}
-section .title h2 {
+.title h1{
   font-size: 4rem;
+  margin-top: 20rem;
+  padding: 2rem;
   text-transform: capitalize;
 }
-section .title h3 {
-  font-size: 2rem;
-  opacity: 0.7;
-  text-transform: capitalize;
+.title h1 .first{
+  font-size: 3rem;
+}
+.title h1 .secound{
+  font-size: 4rem;
+}
+.title h1 .last{
+  font-size: 3rem;
 }
 ::selection {
   background-color: var(--color_Text);
@@ -157,6 +158,7 @@ section .animate {
   align-items: center;
   font-size: 2rem;
   margin-left: 19px;
+  margin-top: 6rem;
   background: var(--color_Text);
   animation: ball 6s infinite;
   grid-row: 2;
@@ -298,7 +300,10 @@ section .animate:hover {
 }
 .All_about p {
   width: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.9rem;
+  margin-bottom: 5rem;
+
 }
 
 /* skills */
@@ -428,8 +433,8 @@ form button {
   padding: 6px 13px;
   margin-top: 2rem;
   border: none;
-  background: red;
-  box-shadow: 0rem 0rem 3rem 0rem red;
+  background: var(--color_Text);
+  box-shadow: 0rem 0rem 3rem 0rem var(--color_Text);
 }
 form button:hover {
   color: var(--black);
@@ -457,6 +462,14 @@ form textarea {
   .curoser{
     display: none;
   }
+  .sec-1{
+    height:20vh;
+  }
+  .home img{
+    /* margin: auto; */
+    /* height: 12rem; */
+    display: none;
+  }
   .curoser-lazy{
     display: none;
   }
@@ -470,9 +483,6 @@ form textarea {
   svg {
     display: none;
   }
-  .sec-1 img {
-    display: none;
-  }
   .All_about img {
     display: none;
   }
@@ -480,7 +490,7 @@ form textarea {
     display: none;
   }
   .All_about p {
-    width: 70%;
+    width: 58%;
     font-size: 15px;
     margin-bottom: 11rem;
   }
@@ -507,9 +517,11 @@ form textarea {
   .All_about img {
     margin: auto;
   }
-  .sec-1 img {
-    margin: 13rem 0rem 0rem -9rem;
-    height: 25rem;
+  .home img{
+    margin: 14rem 0rem 0rem 18rem;
+  }
+  svg {
+    display: none;
   }
   .sec {
     clip-path: none;
@@ -535,6 +547,67 @@ form textarea {
     font-size: 16px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+footer{
+  height: 20vh;
+  background: var(--darkBgColor);
+  align-items: center;
+  border-top: 10px double var(--color_Text);
+  border-bottom: 10px double var(--color_Text);
+}
+footer h1{
+    text-align: center;
+    font-size: 4rem;
+}
+footer p{
+  text-align: center;
+  font-size: 1.5rem;
+}
+.footer_social{ 
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  margin: 1rem;
+  font-size: 2rem;
+}
+.footer_social div{
+  margin: 1rem;
+  color: var(--color_Text);
+  cursor: pointer;
+}
+.footer_social div:hover{
+  color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (prefers-color-scheme: dark) {
   body {
     background: var(--darkBgColor);
@@ -562,4 +635,4 @@ form textarea {
   section .animate i:hover {
     color: rgb(55, 151, 151);
   }
-}
+} 

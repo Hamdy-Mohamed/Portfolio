@@ -114,7 +114,6 @@ google.onclick = () => {
 async function get(){
   let response = await fetch("http://api.alquran.cloud/v1/ayah/262")
   let data = await response.json()
-  console.log(data.data.surah)
   let prograph = document.querySelector(".finally")
   prograph.innerHTML = data.data.text;
   prograph.style.color = "white"

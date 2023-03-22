@@ -32,9 +32,9 @@ react_icon.onclick = () => {
   window.open("https://reactjs.org");
 };
 
-let talk = alert(
-  "if you want to change Name color double click in any space😄 😄"
-);
+// let talk = alert(
+//   "if you want to change Name color double click in any space😄 😄"
+// );
 
 let curoser = document.querySelector(".curoser");
 let curoser_lazy = document.querySelector(".curoser-lazy");
@@ -106,3 +106,9 @@ linkedin.onclick = () => {
 google.onclick = () => {
   window.open("https://mail.google.com/mail/mohameddhamdy407@gmail.com");
 };
+
+
+
+
+
+

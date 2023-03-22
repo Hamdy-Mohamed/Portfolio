@@ -431,7 +431,6 @@ form button {
   font-family: Arial;
   font-size: 2rem;
   padding: 6px 13px;
-  margin-top: 2rem;
   border: none;
   background: var(--color_Text);
   box-shadow: 0rem 0rem 3rem 0rem var(--color_Text);
@@ -565,13 +564,11 @@ footer{
   border-top: 10px double var(--color_Text);
   border-bottom: 10px double var(--color_Text);
 }
-footer h1{
-    text-align: center;
-    font-size: 4rem;
-}
 footer p{
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-family: cursive;
 }
 .footer_social{ 
   display: flex;

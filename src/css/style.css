@@ -566,7 +566,7 @@ footer{
 }
 footer p{
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   font-family: cursive;
 }
@@ -574,8 +574,8 @@ footer p{
   display: flex;
   text-align: center;
   flex-direction: row;
-  margin: 1rem;
-  font-size: 2rem;
+  margin: 0rem;
+  font-size: 1.7rem;
 }
 .footer_social div{
   margin: 1rem;

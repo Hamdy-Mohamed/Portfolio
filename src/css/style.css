@@ -446,7 +446,34 @@ form .input {
 form textarea {
   border: none;
 }
-
+footer{
+  height: 20vh;
+  background: var(--darkBgColor);
+  align-items: center;
+  border-top: 10px double var(--color_Text);
+  border-bottom: 10px double var(--color_Text);
+}
+footer p{
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-family: cursive;
+}
+.footer_social{ 
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  margin: 0rem;
+  font-size: 1.7rem;
+}
+.footer_social div{
+  margin: 1rem;
+  color: var(--color_Text);
+  cursor: pointer;
+}
+.footer_social div:hover{
+  color: aqua;
+}
 ::placeholder {
   width: fit-content;
   font-weight: bold;
@@ -465,8 +492,6 @@ form textarea {
     height:20vh;
   }
   .home img{
-    /* margin: auto; */
-    /* height: 12rem; */
     display: none;
   }
   .curoser-lazy{
@@ -546,64 +571,6 @@ form textarea {
     font-size: 16px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-footer{
-  height: 20vh;
-  background: var(--darkBgColor);
-  align-items: center;
-  border-top: 10px double var(--color_Text);
-  border-bottom: 10px double var(--color_Text);
-}
-footer p{
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  font-family: cursive;
-}
-.footer_social{ 
-  display: flex;
-  text-align: center;
-  flex-direction: row;
-  margin: 0rem;
-  font-size: 1.7rem;
-}
-.footer_social div{
-  margin: 1rem;
-  color: var(--color_Text);
-  cursor: pointer;
-}
-.footer_social div:hover{
-  color: aqua;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (prefers-color-scheme: dark) {
   body {

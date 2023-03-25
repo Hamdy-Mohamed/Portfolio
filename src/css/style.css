@@ -70,6 +70,8 @@ strong {
 }
 .logo{
   cursor: pointer;
+  margin-top: 5rem;
+  height: 15rem;
 }
 section {
   min-height: 80vh;
@@ -505,7 +507,7 @@ footer p{
     display: none;
   }
   svg {
-    display: none;
+    display: block;
   }
   .All_about img {
     display: none;
@@ -536,7 +538,7 @@ footer p{
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   html {
-    font-size: 12px;
+    font-size: 10px;
   }
   .All_about img {
     margin: auto;

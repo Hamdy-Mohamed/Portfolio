@@ -32,9 +32,10 @@ react_icon.onclick = () => {
   window.open("https://reactjs.org");
 };
 
- let talk = alert(
-   "if you want to change Name color double click in any space😄 😄"
-);
+setTimeout(()=>{
+  let talk = alert("if you want to change Text color double click in any space😄😄")
+},10000)
+
 
 let curoser = document.querySelector(".curoser");
 let curoser_lazy = document.querySelector(".curoser-lazy");
@@ -75,8 +76,8 @@ color.addEventListener("change", function () {
 });
 
 // remove inspuct from page
-// document.addEventListener('contextmenu',function(e){
-//   e.preventDefault();
+//  document.addEventListener('contextmenu',function(e){
+//    e.preventDefault();
 // })
 
 
@@ -92,6 +93,7 @@ let facebook = document.querySelector("#facebook");
 let twitter = document.querySelector("#twitter");
 let linkedin = document.querySelector("#linkedin");
 let google = document.querySelector("#google");
+let github = document.querySelector("#github");
 
 facebook.onclick = () => {
   window.open("https://www.facebook.com/hamdy.elgokar.5");
@@ -107,6 +109,9 @@ linkedin.onclick = () => {
 
 google.onclick = () => {
   window.open("https://mail.google.com/mail/mohameddhamdy407@gmail.com");
+};
+github.onclick = () => {
+  window.open("https://github.com/Hamdy-Mohamed");
 };
 
 

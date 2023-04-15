@@ -25,28 +25,27 @@
   background: var(--title_color);
 }
 
-
 /* curoser */
-.curoser{
+.curoser {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   position: absolute;
-  transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%, -50%, 0);
   top: 0;
   left: 0;
   background: var(--color_Text);
   z-index: -1;
 }
 
-.curoser-lazy{
+.curoser-lazy {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 2px solid var(--color_Text);
   position: absolute;
-  transform: translate3d(-50%,-50%,0);
-  transition: 0.10ms ease-out;
+  transform: translate3d(-50%, -50%, 0);
+  transition: 0.1ms ease-out;
   z-index: -1;
 }
 html {
@@ -58,9 +57,10 @@ body {
   background: rgb(240, 248, 255);
   color: var(--black);
   font-family: monospace;
+  text-transform: capitalize;
 }
 strong {
-  color: #62cdff;
+  color: #087be7;
   font-weight: 800;
   text-transform: capitalize;
 }
@@ -68,8 +68,8 @@ strong {
   width: auto;
   overflow: hidden;
 }
-.logo{
-  cursor: pointer;
+.logo {
+  cursor: wait;
   margin-top: 5rem;
   height: 15rem;
 }
@@ -104,13 +104,13 @@ ul li a {
 ul li a:hover {
   color: var(--color_Text);
 }
-.color{
+.color {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   height: 3rem;
   width: 5rem;
-  background-color:#05c1ff;
+  background-color: #05c1ff;
   border: none;
   cursor: pointer;
   border-radius: 15px;
@@ -122,7 +122,7 @@ ul li a:hover {
 
 .home {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-template-rows: 29em 14em auto auto auto auto;
 }
 section .title {
@@ -131,19 +131,19 @@ section .title {
   align-items: center;
   justify-content: space-between;
 }
-.title h1{
+.title h1 {
   font-size: 4rem;
   margin-top: 20rem;
   padding: 2rem;
   text-transform: capitalize;
 }
-.title h1 .first{
+.title h1 .first {
   font-size: 3rem;
 }
-.title h1 .secound{
+.title h1 .secound {
   font-size: 4rem;
 }
-.title h1 .last{
+.title h1 .last {
   font-size: 3rem;
 }
 ::selection {
@@ -302,10 +302,9 @@ section .animate:hover {
 }
 .All_about p {
   width: 100%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.9rem;
   margin-bottom: 5rem;
-
 }
 
 /* skills */
@@ -355,6 +354,62 @@ section .animate:hover {
   width: 10rem;
   margin: auto auto;
   cursor: pointer;
+}
+
+/* portfolio */
+
+.portfolio {
+  height: 7rem;
+  width: 21rem;
+  margin: 10rem auto;
+  font-size: 5rem;
+  text-transform: capitalize;
+  color: var(--title_color);
+  position: relative;
+}
+.portfolio::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 77%;
+  height: 7px;
+  background: var(--color_Text);
+}
+.portfolio:hover::before {
+  animation: portfolio 2s infinite;
+}
+@keyframes portfolio {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.all_portfolio {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+}
+
+.all_portfolio div {
+  height: 22rem;
+  width: 15rem;
+  margin: auto;
+  background: red;
+  border-radius: 1rem;
+}
+.all_portfolio div:hover {
+  box-shadow: 1px 1px 12px 1px var(--dark_Text);
+}
+.all_portfolio div img {
+  height: 100%;
+  width: 100%;
 }
 
 .contact {
@@ -448,32 +503,32 @@ form .input {
 form textarea {
   border: none;
 }
-footer{
+footer {
   height: 20vh;
   background: var(--darkBgColor);
   align-items: center;
   border-top: 10px double var(--color_Text);
   border-bottom: 10px double var(--color_Text);
 }
-footer p{
+footer p {
   text-align: center;
   font-size: 1.5rem;
   margin-top: 1rem;
   font-family: cursive;
 }
-.footer_social{ 
+.footer_social {
   display: flex;
   text-align: center;
   flex-direction: row;
   margin: 0rem;
   font-size: 1.7rem;
 }
-.footer_social div{
+.footer_social div {
   margin: 1rem;
   color: var(--color_Text);
   cursor: pointer;
 }
-.footer_social div:hover{
+.footer_social div:hover {
   color: aqua;
 }
 ::placeholder {
@@ -487,19 +542,22 @@ footer p{
   html {
     font-size: 8.2px;
   }
-  .curoser{
+  .curoser {
     display: none;
   }
-  .sec-1{
-    height:20vh;
+  .sec-1 {
+    height: 20vh;
   }
-  .home img{
+  .all_portfolio {
+    grid-template-columns: auto auto;
+  }
+  .home img {
     display: none;
   }
-  .curoser-lazy{
+  .curoser-lazy {
     display: none;
   }
-  .title img{
+  .title img {
     display: flex;
     flex-direction: row;
   }
@@ -535,7 +593,6 @@ footer p{
     width: 100%;
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   html {
     font-size: 10px;
@@ -543,7 +600,7 @@ footer p{
   .All_about img {
     margin: auto;
   }
-  .home img{
+  .home img {
     margin: 14rem 0rem 0rem 18rem;
   }
   svg {
@@ -559,6 +616,20 @@ footer p{
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .home {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: 29em 14em auto auto auto auto;
+    justify-content: start;
+    align-content: stretch;
+    align-items: stretch;
+    justify-items: center;
+  }
+  .home img {
+    margin: 14rem 0rem 0rem 5rem;
+  }
+}
 @media only screen and (min-width: 1200px) and (max-width: 2039px) {
   html {
     font-size: 14px;
@@ -586,7 +657,7 @@ footer p{
     color: var(--dark_Text);
   }
   .sec {
-    background: #2c3333;
+    background: #0a0b13;
   }
   section .animate {
     background: var(--color_Text);
@@ -601,4 +672,17 @@ footer p{
   section .animate i:hover {
     color: rgb(55, 151, 151);
   }
-} 
+}
+
+/* 
+  .home{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+        grid-template-rows: 29em 14em auto auto auto auto;
+        justify-content: start;
+        align-content: stretch;
+        align-items: stretch;
+        justify-items: center;
+  } */
+/* 768 */
+/* 999 */
